@@ -19,7 +19,15 @@ public class PoemQueryController {
     @GetMapping("ad/getlist/{orderby}")
     public Result queryAD(@PathVariable String orderby) {
         return ResultUtil.success(poemQueryService.findBy(orderby));
+
     }
+
+    @GetMapping("version/{versionId}")
+    public Result queryVersion(@PathVariable String orderby) {
+        return ResultUtil.success(poemQueryService.findBy(orderby));
+
+    }
+
 
     @PostMapping("ad/add")
     public Result addAD(@RequestBody ADInfoDTO adInfoDTO) {
